@@ -1,0 +1,99 @@
+.after:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.before:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+.right {
+  width: 210px;
+  border-top: 2px solid #892526;
+}
+.right .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.web_footer {
+  margin-top: 40px;
+  width: 100%;
+  background-color: black;
+}
+.web_footer .web_cenbox {
+  padding-bottom: 70px;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+.web_footer .web_cenbox .title {
+  padding: 5px 10px;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  position: relative;
+}
+.web_footer .web_cenbox .title .shangla {
+  display: none;
+}
+.web_footer .web_cenbox .title i {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+.web_footer .web_cenbox .list {
+  display: none;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+.web_footer .web_cenbox .list li {
+  padding: 5px 25px;
+}
+.web_footer .web_cenbox .bottom {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+.footer {
+  margin-top: 100px;
+  width: 100%;
+}
+.footer .cenbox {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 145px 100px;
+  background-color: black;
+  font-size: 12px;
+}
+.footer .cenbox .links {
+  float: left;
+  width: 198px;
+}
+.footer .cenbox .links .sort {
+  font-size: 12px;
+  color: white;
+  width: 100%;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+.footer .cenbox .img {
+  position: absolute;
+  width: 320px;
+  height: 165px;
+  right: 145px;
+  bottom: 100px;
+}
+.footer .cenbox .bottom1 {
+  color: white;
+  position: absolute;
+  left: 145px;
+  bottom: 30px;
+}
+.footer .cenbox .bottom2 {
+  color: white;
+  position: absolute;
+  right: 145px;
+  bottom: 30px;
+}

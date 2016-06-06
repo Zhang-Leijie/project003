@@ -1,0 +1,215 @@
+@import url('./init.less');
+
+.swiper-container {
+    width: 100%;
+    height: 533px;
+}
+.web_content{
+	width: 100%;
+	.web_cenbox{
+		width: 100%;
+	}
+	.introduce{
+		padding: 20px 10px;
+		width: 100%;
+		h1{
+			text-align: center;
+		}
+		.word{
+			margin-top: 5px;
+			color: @wordcolor;
+		}
+		.more{
+			width: 150px;
+			height: 30px;
+			background-color: @unitecolor;
+			color: white;
+			margin: 30px auto;
+			line-height: 30px;
+			font-size: 16px;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+	.news{
+		width: 100%;
+		background-color:@background;
+		padding: 20px 30px;
+		position: relative;
+		i{
+			z-index: 100;
+			color: @unitecolor;
+		}
+		.lefticon{
+			position: absolute;
+			left: 0px;
+			top: 30%;
+		}
+		.righticon{
+			position: absolute;
+			right: 0px;
+			top: 30%;
+		}
+		.title{
+			width: 100%;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.roll{
+			width: 100%;
+			position: relative;
+			overflow-x: hidden;
+			height: 100px;
+			.roll2{
+				position: absolute;
+				left: 0px;
+				top: 5px;
+				width: 99999px;
+				.article{
+					// position: relative;
+					// right:0px;
+					// top:0px;
+					float: left;
+					// width: 100px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					// float: left;
+					.time{
+
+					}
+					.newstitle{
+						width: 100%;
+					}
+					.more{
+						text-align: right;
+						color: @unitecolor;
+					}	
+				}
+			}
+	   }
+		.checkmore{
+				width: 150px;
+				height: 30px;
+				background-color: @unitecolor;
+				color: white;
+				margin: 10px auto;
+				line-height: 30px;
+				font-size: 16px;
+				text-align: center;
+				cursor: pointer;
+		}
+	}
+} 
+.content{
+	margin-top: 30px;
+	width: 100%;
+	.cenbox{
+		max-width:1280px;
+		margin: 0px auto;
+		
+		.introduce{
+			padding: 0px 135px;
+			width: 100%;
+			h1{
+				text-align: center;
+				letter-spacing:4px;
+			}
+			.word{
+				margin-top: 20px;
+				color: @wordcolor;
+				letter-spacing:2px;
+			}
+			.more{
+				width: 200px;
+				height: 40px;
+				background-color: @unitecolor;
+				color: white;
+				margin: 30px auto;
+				line-height: 40px;
+				font-size: 16px;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+		.news{
+			width: 100%;
+			background-color:@background;
+			padding: 30px 135px;
+			.title{
+				width: 100%;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.article{
+				position: relative;
+				width: 100%;
+				padding-left: 100px;
+				padding-right: 100px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				.time{
+					position: absolute;
+					top: 5px;
+					left: 0px;
+				}
+				.newstitle{
+					width: 100%;
+				}
+				.newszw{
+					width: 100%;
+					font-size: 12px;
+					text-overflow:ellipsis;
+					white-space:nowrap;
+					overflow:hidden; 
+				}
+				.more{
+					position: absolute;
+					bottom: 5px;
+					right: 0px;
+					color: @unitecolor;
+				}
+			}
+		}
+		.link{
+			padding: 0px 145px;
+			margin-top: 50px;
+			.title{
+				width: 100%;
+				text-align: center;
+				font-size: 22px;
+			}
+			.img{
+				margin-top: 40px;
+				width: 100%;
+				.inimg{
+					margin-right: 2px;
+					position: relative;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+					float: left;
+					width: 245px;
+					height: 190px;
+					.word{
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 50px;
+						line-height: 50px;
+						text-align: center;
+						background-color: rgba(0, 0, 0, 0.5);
+						color:white;
+					}
+				}
+			}
+		}
+	}
+}
+@media(max-width: 600px){
+	.swiper-container {
+	    width: 100%;
+	    height: 150px;
+	} 
+}

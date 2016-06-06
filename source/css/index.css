@@ -1,0 +1,223 @@
+.after:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.before:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+.right {
+  width: 210px;
+  border-top: 2px solid #892526;
+}
+.right .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.swiper-container {
+  width: 100%;
+  height: 533px;
+}
+.web_content {
+  width: 100%;
+}
+.web_content .web_cenbox {
+  width: 100%;
+}
+.web_content .introduce {
+  padding: 20px 10px;
+  width: 100%;
+}
+.web_content .introduce h1 {
+  text-align: center;
+}
+.web_content .introduce .word {
+  margin-top: 5px;
+  color: #666;
+}
+.web_content .introduce .more {
+  width: 150px;
+  height: 30px;
+  background-color: #892526;
+  color: white;
+  margin: 30px auto;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.web_content .news {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px 30px;
+  position: relative;
+}
+.web_content .news i {
+  z-index: 100;
+  color: #892526;
+}
+.web_content .news .lefticon {
+  position: absolute;
+  left: 0px;
+  top: 30%;
+}
+.web_content .news .righticon {
+  position: absolute;
+  right: 0px;
+  top: 30%;
+}
+.web_content .news .title {
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.web_content .news .roll {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  height: 100px;
+}
+.web_content .news .roll .roll2 {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 99999px;
+}
+.web_content .news .roll .roll2 .article {
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.web_content .news .roll .roll2 .article .newstitle {
+  width: 100%;
+}
+.web_content .news .roll .roll2 .article .more {
+  text-align: right;
+  color: #892526;
+}
+.web_content .news .checkmore {
+  width: 150px;
+  height: 30px;
+  background-color: #892526;
+  color: white;
+  margin: 10px auto;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.content {
+  margin-top: 30px;
+  width: 100%;
+}
+.content .cenbox {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.content .cenbox .introduce {
+  padding: 0px 135px;
+  width: 100%;
+}
+.content .cenbox .introduce h1 {
+  text-align: center;
+  letter-spacing: 4px;
+}
+.content .cenbox .introduce .word {
+  margin-top: 20px;
+  color: #666;
+  letter-spacing: 2px;
+}
+.content .cenbox .introduce .more {
+  width: 200px;
+  height: 40px;
+  background-color: #892526;
+  color: white;
+  margin: 30px auto;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.content .cenbox .news {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 30px 135px;
+}
+.content .cenbox .news .title {
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.content .cenbox .news .article {
+  position: relative;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.content .cenbox .news .article .time {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+.content .cenbox .news .article .newstitle {
+  width: 100%;
+}
+.content .cenbox .news .article .newszw {
+  width: 100%;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.content .cenbox .news .article .more {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  color: #892526;
+}
+.content .cenbox .link {
+  padding: 0px 145px;
+  margin-top: 50px;
+}
+.content .cenbox .link .title {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+.content .cenbox .link .img {
+  margin-top: 40px;
+  width: 100%;
+}
+.content .cenbox .link .img .inimg {
+  margin-right: 2px;
+  position: relative;
+  float: left;
+  width: 245px;
+  height: 190px;
+}
+.content .cenbox .link .img .inimg img {
+  width: 100%;
+  height: 100%;
+}
+.content .cenbox .link .img .inimg .word {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+@media (max-width: 600px) {
+  .swiper-container {
+    width: 100%;
+    height: 150px;
+  }
+}

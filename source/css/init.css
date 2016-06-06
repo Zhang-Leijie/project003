@@ -1,0 +1,10 @@
+.after:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.before:before {
+  display: block;
+  content: '';
+  clear: both;
+}

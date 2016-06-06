@@ -1,0 +1,177 @@
+.after:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.before:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+.right {
+  width: 210px;
+  border-top: 2px solid #892526;
+}
+.right .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.swiper-container {
+  width: 100%;
+  height: 533px;
+}
+.content {
+  width: 100%;
+}
+.content .cenbox {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.content .cenbox .lead {
+  width: 100%;
+  padding: 0px 135px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ebebeb;
+}
+.content .cenbox .inbox {
+  width: 100%;
+  padding: 30px 135px;
+}
+.content .cenbox .inbox .leftbox {
+  float: left;
+  width: 210px;
+  border-top: 2px solid #892526;
+}
+.content .cenbox .inbox .leftbox .title {
+  color: #892526;
+  line-height: 40px;
+  font-size: 18px;
+}
+.content .cenbox .inbox .leftbox .listbox {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+.content .cenbox .inbox .leftbox .listbox .show {
+  color: #892526;
+}
+.content .cenbox .inbox .leftbox .listbox .list {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.content .cenbox .inbox .leftbox .listbox .list i {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.content .cenbox .inbox .leftbox .listbox .list2 {
+  color: #892526;
+  cursor: pointer;
+}
+.content .cenbox .inbox .rightbox {
+  float: left;
+  width: 800px;
+  padding: 0px 30px;
+  color: #666;
+}
+.content .cenbox .inbox .rightbox .amount {
+  width: 240px;
+  height: auto;
+  margin-left: 5px;
+  float: left;
+  padding: 50px 10px 10px;
+  position: relative;
+  background-color: #f8f8f8;
+}
+.content .cenbox .inbox .rightbox .amount .title {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 15px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #535353;
+  color: white;
+}
+.content .cenbox .inbox .rightbox .amount .name {
+  line-height: 30px;
+}
+.content .cenbox .inbox .rightbox .amount .img {
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+}
+.content .cenbox .inbox .rightbox .amount .intro {
+  width: 100%;
+  font-size: 12px;
+}
+.content .cenbox .inbox .rightbox .proimg {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+.content .cenbox .inbox .rightbox .proimg .img {
+  width: 380px;
+  height: auto;
+  float: left;
+}
+.content .cenbox .inbox .rightbox .proimg .img .big {
+  width: 100%;
+  height: 330px;
+}
+.content .cenbox .inbox .rightbox .proimg .img .small {
+  width: 120px;
+  height: 100px;
+  margin-top: 30px;
+  margin-right: 10px;
+  float: left;
+  cursor: pointer;
+}
+.content .cenbox .inbox .rightbox .proimg .img .border {
+  position: relative;
+  border: 2px solid #892526;
+}
+.content .cenbox .inbox .rightbox .proimg .img .border:before {
+  position: absolute;
+  top: -7px;
+  right: 50px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid white;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.content .cenbox .inbox .rightbox .proimg .img .border:after {
+  position: absolute;
+  top: -6px;
+  right: 51px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #892526;
+  border-left: 6px solid transparent;
+  content: '';
+}
+.content .cenbox .inbox .rightbox .proimg .word {
+  width: 350px;
+  padding: 0 10px;
+  float: left;
+}
+.content .cenbox .inbox .rightbox .proimg .word .title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: black;
+}
+.content .cenbox .inbox .rightbox .displayimg {
+  width: 100%;
+}
+.content .cenbox .inbox .rightbox .displayimg img {
+  width: 100%;
+}
