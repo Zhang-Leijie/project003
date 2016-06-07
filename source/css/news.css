@@ -119,8 +119,9 @@
   }
   .content .cenbox h1 {
     text-align: center;
+    margin-top: 20px;
     padding-bottom: 30px;
-    color: #646464;
+    color: black;
   }
   .content .cenbox .newsarticle .title {
     text-align: center;
