@@ -8,15 +8,6 @@
   content: '';
   clear: both;
 }
-.right {
-  width: 210px;
-  border-top: 2px solid #892526;
-}
-.right .title {
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-}
 .web_header {
   height: 35px;
 }
@@ -190,6 +181,7 @@
   border: 1px solid #ccc;
   height: 100%;
   width: 100%;
+  padding: 7.5px 5px;
 }
 .header .cenbox .searchicon {
   position: absolute;
