@@ -7,16 +7,24 @@
     <title>尤奈特</title>
     <!-- <link href="__PUBLIC__/source/img/favicon.ico" rel="icon"> -->
     <link rel="stylesheet" type="text/css" href="../source/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../source/css/news.css">
+    <link rel="stylesheet" type="text/css" href="../source/css/product.css">
     <link rel="stylesheet" type="text/css" href="../source/css/header.css">
     <link rel="stylesheet" type="text/css" href="../source/css/footer.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../source/Swiper-3.3.1 2/dist/css/swiper.css"> -->
+    <link rel="stylesheet" type="text/css" href="../source/Swiper-3.3.1 2/dist/css/swiper.css">
     <link rel="stylesheet" type="text/css" href="../source/font-awesome-4.4.0/css/font-awesome.min.css">
     <script src="../source/js/jquery-1.11.2.min.js"></script>
     <script src="../source/js/public.js"></script>
-     <!-- <script src="../source/Swiper-3.3.1 2/dist/js/swiper.jquery.min.js"></script> -->
+     <script src="../source/Swiper-3.3.1 2/dist/js/swiper.jquery.min.js"></script>
 </head>
 <body>
+<style type="text/css">
+@media(max-width: 600px){
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+    }
+}
+</style>
 <header class="web_header">
     <div class="web_cenbox">
         <div class="head_list">
@@ -54,19 +62,36 @@
     </div>
 </header>
 
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/pro1.jpg"></div>
+        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/pro2.jpg"></div>
+        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/pro3.jpg"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    
+</div>
+
 <div class="content">
-    <div class="cenbox">
-        <h1>
-            新闻中心
-        </h1>
-        <div class="newsarticle">
-            <div class="title">
-                尤奈特公司发表的新闻
-            </div>
-            <div class="zhengwen">
-                <div class="time">2016/06/06</div>
-                <span style="font-size:14px;">测试</span>
-            </div>
+    <div class="intro">
+        <div class="word">
+            <span style="font-size:16px;line-height:30px;">无刷牵引电机</span><br/>
+            产品参数：<br/>
+            品牌：UNITE／尤奈特<br/>
+            型号：BM 1418HQF 350-750W<br/>
+            运转速度：调速电动机<br/>
+            安装结构型式：立式<br/>
+            功能类型：控制电动机<br/>
+            防护型式：封闭式<br/>
+            绝缘等级：B级<br/>
+            电源种类：直流电动机<br/>
+            结构与工作原理：永磁同步电动机<br/>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/infor1.jpg">
+            <img src="../source/image/webimg/infor2.jpg">
+            <img src="../source/image/webimg/infor3.jpg">
+            <img src="../source/image/webimg/infor4.jpg">
         </div>
     </div>
 </div>
@@ -136,9 +161,9 @@
     </div>
 </footer>
 <script type="text/javascript">
-// window.onload = function(){
-//     swiper();
-// }
+window.onload = function(){
+    swiper();
+}
 $(".title").click(function(event) {
     $(this).next(".list").toggle(400);
     $(this).children('.xiala').toggle(400);
@@ -148,14 +173,23 @@ $(".select").click(function(event) {
     $(".head_list").toggle();
     $(".select").toggleClass('show');
 });
+
+
+$(".sort").click(function(event) {
+    $(".sort").removeClass('show');
+    $(this).addClass('show');
+    $(".cenbox").hide();
+    var id = $(this).attr("data-id");
+    $("#"+id).show();
+});
 var w=$(window).width();
 if(w>600){
-        window.location.href="news_article.html";
+        window.location.href="product.html";
 }
 $(window).bind("resize",function(){
     var h =  $(window).width();
     if(h>600){
-        window.location.href="news_article.html";
+        window.location.href="product.html";
     }
 });
 </script> 

@@ -27,12 +27,12 @@
                 </div>
             </div>
             <ul>
-                <li>首页</li>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>企业招聘</li>
-                <li>新闻和活动</li>
-                <li>联系我们</li>
+                <a href="web_index.html"><li>首页</li></a>
+                <a href="web_connect.html"><li>关于我们</li></a>
+                <a href="web_product.html"><li>产品中心</li></a>
+                <a href="web_employ.html"><li>企业招聘</li></a>
+                <a href="web_news.html"><li>新闻和活动</li></a>
+                <a href="web_connect.html"><li>联系我们</li></a>
             </ul>
         </div>
         <div class="brand">
@@ -171,6 +171,16 @@ $(".title").click(function(event) {
 $(".select").click(function(event) {
     $(".head_list").toggle();
     $(".select").toggleClass('show');
+});
+var w=$(window).width();
+if(w>600){
+        window.location.href="newsdetail.html";
+}
+$(window).bind("resize",function(){
+    var h =  $(window).width();
+    if(h>600){
+        window.location.href="newsdetail.html";
+    }
 });
 </script> 
 </body>

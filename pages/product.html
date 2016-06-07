@@ -109,6 +109,48 @@
                         产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介
                     </div>
                 </div>
+                <div class="amount">
+                    <div class="title">
+                        无刷牵引电机
+                    </div>
+                    <div class="name">
+                        BLT16-BS165
+                    </div>
+                    <div class="img xianshi">
+                        <img src="../source/image/webimg/pro1.jpg" style="width:100%;height:100%;">
+                    </div>
+                    <div class="intro">
+                        产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介
+                    </div>
+                </div>
+                <div class="amount">
+                    <div class="title">
+                        无刷牵引电机
+                    </div>
+                    <div class="name">
+                        BLT16-BS165
+                    </div>
+                    <div class="img xianshi">
+                        <img src="../source/image/webimg/pro1.jpg" style="width:100%;height:100%;">
+                    </div>
+                    <div class="intro">
+                        产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介
+                    </div>
+                </div>
+                <div class="amount">
+                    <div class="title">
+                        无刷牵引电机
+                    </div>
+                    <div class="name">
+                        BLT16-BS165
+                    </div>
+                    <div class="img xianshi">
+                        <img src="../source/image/webimg/pro1.jpg" style="width:100%;height:100%;">
+                    </div>
+                    <div class="intro">
+                        产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介产品各项参数简介
+                    </div>
+                </div>
             </div>
             <div class="rightbox" id="rightbox2" style="display:none;">
                 <div class="amount">
@@ -304,6 +346,14 @@
 // window.onload = function(){
 //     swiper();
 // }
+var u = $(".inbox").width();
+$(".rightbox").css("width",u-210+"px");
+
+$(window).bind("resize",function(){
+    var d = $(".inbox").width();
+$(".rightbox").css("width",d-210+"px");
+});
+
 $(".list").click(function() {
     $(".list").removeClass('show');
     $(this).addClass('show');
@@ -327,6 +377,16 @@ $(".small").click(function() {
 $(".xianshi").click(function() {
     $(".rightbox").hide();
     $("#detail").show();
+});
+var w=$(window).width();
+if(w<600){
+        window.location.href="web_product.html";
+}
+$(window).bind("resize",function(){
+    var h =  $(window).width();
+    if(h<600){
+        window.location.href="web_product.html";
+    }
 });
 </script> 
 </body>

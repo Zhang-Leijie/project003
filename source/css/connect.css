@@ -75,3 +75,39 @@
   float: left;
   line-height: 25px;
 }
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    min-height: 200px;
+  }
+  .content h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .content .title {
+    width: 100%;
+    line-height: 70px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  .content .cenbox {
+    color: #666;
+    width: 100%;
+    padding: 10px;
+  }
+  .content .cenbox .img {
+    padding: 10px 0;
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
+  .content .cenbox .img .name {
+    font-size: 18px;
+  }
+  .content .cenbox .img img {
+    width: 100%;
+  }
+}

@@ -278,6 +278,16 @@ $(".list").click(function() {
     var id = $(this).attr("data-id");
     $("#"+id).show();
 });
+var w=$(window).width();
+if(w<600){
+        window.location.href="web_employ.html";
+};
+$(window).bind("resize",function(){
+    var h =  $(window).width();
+    if(h<600){
+        window.location.href="web_employ.html";
+    }
+});
 </script> 
 </body>
 </html>

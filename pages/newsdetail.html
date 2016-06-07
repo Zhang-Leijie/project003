@@ -176,6 +176,16 @@
 // window.onload = function(){
 //     swiper();
 // }
+var w=$(window).width();
+if(w<600){
+        window.location.href="web_newsdetail.html";
+}
+$(window).bind("resize",function(){
+    var h =  $(window).width();
+    if(h<600){
+        window.location.href="web_newsdetail.html";
+    }
+});
 </script> 
 </body>
 </html>

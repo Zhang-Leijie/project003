@@ -112,6 +112,10 @@
         width: 100%;
         display:flex;
         border-bottom: 1px solid #EBEBEb;
+        .show{
+            color: @unitecolor;
+            border-bottom: 2px solid  @unitecolor;
+        }
         .sort{
             line-height: 58px;
             font-size: 18px;
@@ -136,12 +140,43 @@
             }
             .img{
                 width: 100%;
+                height: 210px;
             }
-            .word{
-                width: 100px;
+            .desc{
+                width: 100%;
                 padding: 20px 10px;
                 background-color: @unitecolor;
                 color: white;
+            }
+            .oppo{
+                width: 100%;
+                padding: 10px;
+                .title{
+                    font-size: 18px;
+                    color: black;
+                }
+                .word{
+                    font-size: 12px;
+                }
+                .sortbox{
+                    width: 100%;
+                    padding: 10px 0px;
+                    border-bottom: 1px solid #ccc;
+                    .name{
+                        font-size: 16px
+                    }
+                    .sortimg{
+                        width: 150px;
+                        height:100px;
+                        float: left;
+                    }
+                    .sortword{
+                        float: left;
+                        width: auto;
+                        font-size: 12px;
+                        padding: 0 10px;
+                    }
+                }
             }
         }
     }

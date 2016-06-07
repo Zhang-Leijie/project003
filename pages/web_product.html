@@ -7,7 +7,7 @@
     <title>尤奈特</title>
     <!-- <link href="__PUBLIC__/source/img/favicon.ico" rel="icon"> -->
     <link rel="stylesheet" type="text/css" href="../source/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../source/css/news.css">
+    <link rel="stylesheet" type="text/css" href="../source/css/product.css">
     <link rel="stylesheet" type="text/css" href="../source/css/header.css">
     <link rel="stylesheet" type="text/css" href="../source/css/footer.css">
     <!-- <link rel="stylesheet" type="text/css" href="../source/Swiper-3.3.1 2/dist/css/swiper.css"> -->
@@ -53,21 +53,100 @@
         </div>
     </div>
 </header>
-
+<div class="swiper-container">
+    <img src="../source/image/webimg/banner1.jpg" style="width:100%;height:100%;">
+</div>
+<div class="wrapbox">
+    <div class="lead">
+        <div class="show sort" data-id="cenbox1">产品总览</div>
+        <div class="sort" data-id="cenbox2">无刷牵引电机</div>
+        <div class="sort" data-id="cenbox3">无刷控制器</div>
+        <div class="sort" data-id="cenbox4">无刷工业电机</div>
+        <div class="sort" data-id="cenbox5">有刷牵引电机</div>
+        <div class="sort" data-id="cenbox6">其他产品</div>
+    </div>
+</div>
 <div class="content">
-    <div class="cenbox">
-        <h1>
-            新闻中心
-        </h1>
-        <div class="newsarticle">
-            <div class="title">
-                尤奈特公司发表的新闻
-            </div>
-            <div class="zhengwen">
-                <div class="time">2016/06/06</div>
-                <span style="font-size:14px;">测试</span>
+    <div class="cenbox" id="cenbox1" style="display:block;">
+        <div class="img">
+            <img src="../source/image/webimg/pro1.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
             </div>
         </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro2.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷控制器</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro3.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷工业电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro4.jpg" style="width:100%;">
+            <div class="word">
+                <span>有刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+    <div class="cenbox" id="cenbox2">
+        <div class="img">
+            <img src="../source/image/webimg/pro4.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+    <div class="cenbox" id="cenbox3">
+        <div class="img">
+            <img src="../source/image/webimg/pro5.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷控制器</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+    <div class="cenbox" id="cenbox4">
+        <div class="img">
+            <img src="../source/image/webimg/pro7.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷工业电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+    <div class="cenbox" id="cenbox5">
+        <div class="img">
+            <img src="../source/image/webimg/pro7.jpg" style="width:100%;">
+            <div class="word">
+                <span>有刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+    <div class="cenbox" id="cenbox6">
+        <div class="img">
+            <img src="../source/image/webimg/pro2.jpg" style="width:100%;">
+            <div class="word">
+                <span>其他产品</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
     </div>
 </div>
 
@@ -148,14 +227,23 @@ $(".select").click(function(event) {
     $(".head_list").toggle();
     $(".select").toggleClass('show');
 });
+
+
+$(".sort").click(function(event) {
+    $(".sort").removeClass('show');
+    $(this).addClass('show');
+    $(".cenbox").hide();
+    var id = $(this).attr("data-id");
+    $("#"+id).show();
+});
 var w=$(window).width();
 if(w>600){
-        window.location.href="news_article.html";
+        window.location.href="product.html";
 }
 $(window).bind("resize",function(){
     var h =  $(window).width();
     if(h>600){
-        window.location.href="news_article.html";
+        window.location.href="product.html";
     }
 });
 </script> 

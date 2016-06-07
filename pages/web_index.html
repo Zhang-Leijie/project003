@@ -27,12 +27,12 @@
                 </div>
             </div>
             <ul>
-                <li>首页</li>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>企业招聘</li>
-                <li>新闻和活动</li>
-                <li>联系我们</li>
+                <a href="web_index.html"><li>首页</li></a>
+                <a href="web_connect.html"><li>关于我们</li></a>
+                <a href="web_product.html"><li>产品中心</li></a>
+                <a href="web_employ.html"><li>企业招聘</li></a>
+                <a href="web_news.html"><li>新闻和活动</li></a>
+                <a href="web_connect.html"><li>联系我们</li></a>
             </ul>
         </div>
         <div class="brand">
@@ -60,7 +60,8 @@
         
     </div>
     <div class="swiper-pagination"></div>
-    
+    <div class="swiper-button-prev swiper-button-brown" style="display:none;"></div>
+    <div class="swiper-button-next swiper-button-brown" style="display:none;"></div>
 </div>
 <div class="web_content">
     <div class="web_cenbox">
@@ -77,13 +78,50 @@
             </div>
         </div>
         <div class="news">
-            <i class="lefticon fa fa-angle-left fa-4x" aria-hidden="true" data-id="ro1"></i>
-            <i class="righticon fa fa-angle-right fa-4x" aria-hidden="true" data-id="ro1"></i>
+            <!-- <i class="lefticon fa fa-angle-left fa-4x" aria-hidden="true" data-id="ro1"></i>
+            <i class="righticon fa fa-angle-right fa-4x" aria-hidden="true" data-id="ro1"></i> -->
             <div class="title">
                 新闻中心
             </div>
-            <div class="roll">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="article">
+                            <div class="time">
+                                2016/5/30
+                            </div>
+                            <div class="newstitle">
+                                尤奈特发表的新闻标题
+                            </div>
+                            <div class="more">
+                                阅读详情
+                                <i class="fa fa-angle-right " aria-hidden="true"></i>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="article">
+                            <div class="time">
+                                2016/5/31
+                            </div>
+                            <div class="newstitle">
+                                尤奈特发表的新闻标题
+                            </div>
+                            <div class="more">
+                                阅读详情
+                                <i class="fa fa-angle-right " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-prev swiper-button-brown"></div>
+                <div class="swiper-button-next swiper-button-brown"></div>
+            </div>
+            <!-- <div class="roll">
                 <div class="roll2" id="ro1">
+                    <div class="article" id="ro1f"></div>
                     <div class="article">
                         <div class="time">
                             2016/5/30
@@ -120,9 +158,10 @@
                             <i class="fa fa-angle-right " aria-hidden="true"></i>
                         </div>
                      </div>
+                     <div class="article" id="ro1l"></div>
                      <div class="after"></div>
                  </div>
-            </div>
+            </div> -->
             <div class="checkmore">
                     查看更多
                     <i class="fa fa-angle-right fa-lg" aria-hidden="true" style="color:white"></i>
@@ -130,51 +169,44 @@
             
         </div>
         <div class="news">
-            <i class="lefticon fa fa-angle-left fa-4x" aria-hidden="true" data-id="ro2"></i>
-            <i class="righticon fa fa-angle-right fa-4x" aria-hidden="true" data-id="ro2"></i>
             <div class="title">
                 活动中心
             </div>
-            <div class="roll">
-                <div class="roll2" id="ro2">
-                    <div class="article">
-                        <div class="time">
-                            2016/5/30
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="article">
+                            <div class="time">
+                                2016/5/30
+                            </div>
+                            <div class="newstitle">
+                                尤奈特发表的新闻标题
+                            </div>
+                            <div class="more">
+                                阅读详情
+                                <i class="fa fa-angle-right " aria-hidden="true"></i>
+                            </div>    
                         </div>
-                        <div class="newstitle">
-                            尤奈特发表的新闻标题
-                        </div>
-                        <div class="more">
-                            阅读详情
-                            <i class="fa fa-angle-right " aria-hidden="true"></i>
-                        </div>    
                     </div>
-                    <div class="article">
-                        <div class="time">
-                            2016/5/31
+                    <div class="swiper-slide">
+                        <div class="article">
+                            <div class="time">
+                                2016/5/31
+                            </div>
+                            <div class="newstitle">
+                                尤奈特发表的新闻标题
+                            </div>
+                            <div class="more">
+                                阅读详情
+                                <i class="fa fa-angle-right " aria-hidden="true"></i>
+                            </div>
                         </div>
-                        <div class="newstitle">
-                            尤奈特发表的新闻标题
-                        </div>
-                        <div class="more">
-                            阅读详情
-                            <i class="fa fa-angle-right " aria-hidden="true"></i>
-                        </div>
-                     </div>
-                     <div class="article">
-                        <div class="time">
-                            2016/5/32
-                        </div>
-                        <div class="newstitle">
-                            尤奈特发表的新闻标题
-                        </div>
-                        <div class="more">
-                            阅读详情
-                            <i class="fa fa-angle-right " aria-hidden="true"></i>
-                        </div>
-                     </div>
-                     <div class="after"></div>
-                 </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-prev swiper-button-brown"></div>
+                <div class="swiper-button-next swiper-button-brown"></div>
             </div>
             <div class="checkmore">
                     查看更多
@@ -186,15 +218,36 @@
 <div style="text-align:center;font-size:20px;margin-top:20px;line-height:25px;margin-bottom:20px;">
     相关链接
 </div>
-<div class="swiper-container">
+<div class="swiper-container" style="padding-bottom:20px;height:220px;">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/link1.jpg"></div>
-        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/link2.jpg"></div>
-        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/link3.jpg"></div>
-        <div class="swiper-slide"><img style="width:100%;height:100%;" src="../source/image/webimg/link4.jpg"></div>
+        <div class="swiper-slide">
+            <img style="width:100%;height:100%;" src="../source/image/webimg/link1.jpg">
+            <div class="back">
+                领导／专家支持
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img style="width:100%;height:100%;" src="../source/image/webimg/link2.jpg">
+            <div class="back">
+                行业先锋 专业品质
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img style="width:100%;height:100%;" src="../source/image/webimg/link3.jpg">
+            <div class="back">
+                绿色动力 造福社会
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img style="width:100%;height:100%;" src="../source/image/webimg/link4.jpg">
+            <div class="back">
+                人才招聘
+            </div>
+        </div>
     </div>
-    <div class="swiper-pagination"></div>
-    
+    <div class="swiper-pagination" style="bottom:0px;"></div>
+    <div class="swiper-button-prev swiper-button-brown" style="display:none;"></div>
+    <div class="swiper-button-next swiper-button-brown" style="display:none;"></div>
 </div>
 
 <footer class="web_footer">
@@ -265,8 +318,13 @@
 window.onload = function(){
     swiper();
 }
+
+
+
 var h =  $(window).width()-60;
+
 $(".article").css("width",h+"px");
+
 $(".righticon").click(function(event) {
     name = $(this).attr("data-id");
     l = $("#"+name).css("left");
@@ -287,6 +345,16 @@ $(".title").click(function(event) {
 $(".select").click(function(event) {
     $(".head_list").toggle();
     $(".select").toggleClass('show');
+});
+var w=$(window).width();
+if(w>600){
+        window.location.href="index.html";
+}
+$(window).bind("resize",function(){
+    var h =  $(window).width();
+    if(h>600){
+        window.location.href="index.html";
+    }
 });
 </script> 
 </body>
