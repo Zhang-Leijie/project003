@@ -1,0 +1,203 @@
+<div class="qu-header">
+		<i class="labelcolor fa fa-star fa-2x" aria-hidden="true"></i>
+		<span class="maintitle">&nbsp;新增产品</span>
+	</div>
+	<div class="ar-box">
+	<div class="ar-input">
+		<div class="ar-word">产品名称</div>
+		<input id="aticle_title" type="text" class="nr ui-input" placeholder="请输入产品名称" style="width:90%;">
+	</div>
+	<div class="ar-input" id="mainTagBox">
+		<div class="ar-word">产品类型</div>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra1" value="1">&nbsp;&nbsp;<label for="ra1">无刷牵引电机</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra2" value="2">&nbsp;&nbsp;<label for="ra2" >无刷控制器</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra3" value="3">&nbsp;&nbsp;<label for="ra3">无刷工业电机</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra4" value="4">&nbsp;&nbsp;<label for="ra4">有刷牵引电机</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra4" value="4">&nbsp;&nbsp;<label for="ra5">其他产品</label>
+	</div>
+	
+	<!-- <div class="ar-input">
+		<div class="ar-word">发布时间</div>
+		<div style="position:relative;"><input id="artile_dd" type="text" class="nr ui-input" placeholder="请输入发布时间" style="width:90%;"></div>
+    </div>
+	<div class="ar-input">
+		<div class="ar-word">发布人</div>
+		<input id="article_author" type="text" class="nr ui-input" placeholder="请输入发布人" style="width:90%;">
+	</div> -->
+
+	<!-- <div class="ar-input">
+		<div class="ar-word">来源</div>
+		<input id="article_source" type="text" class="nr ui-input" placeholder="请输入来源" style="width:90%;">
+	</div> -->
+	
+	<!-- <div class="ar-input">
+		<div class="ar-word">摘要</div>
+		<textarea id="article_abstract" type="text" class="nr ui-input" placeholder="请输入文章摘要；有配图建议70字以内；无配图建议150字以内" style="width:90%;height: 150px;"></textarea>
+	</div> -->
+	
+	<div class="ar-input">
+		<div class="ar-word">主配图</div>
+		<input type="file" class="tianjia" id="img1">
+		<div class="ar-tupian" id="put1"></div>	
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">副配图1</div>
+		<input type="file" class="tianjia" id="img2">
+		<div class="ar-tupian" id="put2"></div>	
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">副配图2</div>
+		<input type="file" class="tianjia" id="img3">
+		<div class="ar-tupian" id="put3"></div>	
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">副配图3</div>
+		<input type="file" class="tianjia" id="img4">
+		<div class="ar-tupian" id="put4"></div>	
+	</div>
+	<div class="ar-input">
+		<div class="ar-word">产品参数</div>
+		<script id="editor1" type="text/plain" style="height: 300px;"></script>
+	</div>
+	<div class="ar-input">
+		<div class="ar-word">产品介绍</div>
+		<script id="editor2" type="text/plain" style="height: 500px;"></script>
+	</div>
+	<div class="fabu">发布</div>
+</div>
+
+<script type="text/javascript">
+
+//实例化编辑器
+//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+UE.delEditor('editor1');
+UE.delEditor('editor2');
+var ue = UE.getEditor('editor1',{wordCount:false});
+var ue = UE.getEditor('editor2',{wordCount:false});
+// setTimeout(function(){
+// 	ue.execCommand("drafts");
+// },500);
+
+
+
+function img1(infile,outfile){
+		var result = $(outfile)[0]; 
+		var input = $(infile)[0];
+		if(typeof FileReader==='undefined'){ 
+		    result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+		    input.setAttribute('disabled','disabled');
+		}
+		else{ 
+			input.addEventListener('change',readFile,false);
+		}
+		var imagefile;
+		function readFile(){ 
+		    var file = this.files[0]; 
+		    if(!/image\/\w+/.test(file.type)){ 
+		        alert("文件必须为图片！"); 
+		        return false; 
+		    } 
+		    var reader = new FileReader(); 
+		    reader.readAsDataURL(file);
+		    reader.onload = function(e){ 
+		        result.innerHTML = '<img style="width:100%;height:100%;" src="'+this.result+'" alt=""/>';
+		        imagefile = this.result.split(',')[1];
+		    }
+		}
+}
+$("#img1").mouseenter(function(event) {
+	img1("#img1","#put1");
+});
+$("#img2").mouseenter(function(event) {
+	img1("#img2","#put2");
+});
+$("#img3").mouseenter(function(event) {
+	img1("#img3","#put3");
+});
+$("#img4").mouseenter(function(event) {
+	img1("#img4","#put4");
+});
+
+// 绑定时间插件
+$('#artile_dd').pickadate();
+// 发布文章按钮
+// var canfabu = true;
+author = $.trim($("#article_author").val()),
+$(".fabu").click(function(){
+	// if(canfabu){
+		var title = $.trim($("#aticle_title").val()),
+		    cate_id = $('#mainTagBox input:radio:checked').val(),
+			type = $('#fuTagBox input:radio:checked').val(),
+			time = $('#artile_dd').val(),
+			author = $.trim($("#article_author").val()),
+			source = $.trim($("#article_source").val()),
+			text = ue.getContent();
+			
+
+		if(title==""){
+			alert("文章标题不能为空");
+		}
+		else if(time==""){
+			alert("发表时间不能为空");
+		}
+		else if(author==""){
+			alert("作者不能为空");
+		}
+		else if(text==""){
+			alert("正文不能为空");
+		}
+		else if(source==""){
+			alert("来源不能为空");
+		}
+		else if(cate_id==""){
+			alert("发布位置不能为空");
+		}
+		else if(type==""){
+			alert("副标签不能为空");
+		}
+		else{
+			// canfabu = false;
+			var timearray = $('#artile_dd').val().split("-");
+			time = Date.parse(new Date(timearray[0],timearray[1]-1,timearray[2]))/1000;
+			var data = {
+					"title":title,
+				    "cate_id":cate_id,
+					"type":type,
+					"time":time,
+					"author":author,
+					"source":source,
+					"content":text
+				};
+			// 照片
+			// if($(".ar-tupian img").attr("src")!=(""||undefined)){
+			// 	data["image"]=$(".ar-tupian img").attr("src").split(',')[1];
+			// }
+			
+			$.ajax({
+				url: "__ROOT__/admin/articleinputapi",
+				type: "POST",
+				data: data,
+				success: function(data){
+					if(data.state==0){
+						alert("文章发布成功");
+						ue.execCommand('clearlocaldata');
+						window.location.reload();
+					}
+					else{
+						alert(data.detail);
+						// canfabu = true;
+					}
+				},
+				error: function(){
+					alert("网络异常")
+					// canfabu = true;
+				}
+			});
+		}
+	// }
+});
+
+</script>

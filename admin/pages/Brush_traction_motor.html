@@ -1,0 +1,175 @@
+<div class="qu-header">
+		<i class="labelcolor fa fa-star fa-2x" aria-hidden="true"></i>
+		<span class="maintitle">&nbsp;有刷牵引电机</span>
+</div>
+	
+	<!-- <div class="qu-box"></div> -->
+	<div class="qu-search">
+		<!-- <div class="po-plus"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></div> -->
+		<div style="float:right;height:30px;">
+			<span>Search:</span><input type="text" style="width:250px;height:30px;border:1px solid #ccc;margin-left:10px;" class="ui-input" id="search" placeholder="请输入标题 发布人或来源">
+			<i class="fa fa-search" aria-hidden="true" style="margin-left:-30px;cursor:pointer;width:20px;height:20px;" id="searching"></i>
+		</div>
+	</div>
+	<table   style="margin-top:0px" class="qu-table" border="1" id="tianjia">
+		<thead>
+		<tr style="font-weight:bold;font-size:14px;">
+			<th>产品名</th>
+			<th>编辑</th>
+		</tr>
+		</thead>
+		
+		<tbody id="tianjia">
+		<volist name="article" id="vo">
+		<tr class="dianjiyc">
+			<td>
+				
+			</td>
+			<td>
+				<div class="editicon anjan">
+					<i class="fa fa-pencil" style="color:white;margin-left:4.5px;"></i>
+				</div>
+				<div class="imgroll removeicon anjan" data-id="{$vo.id}" data-key="1">
+					<i class="fa fa-remove" style="color:white;margin-left:4.5px;"></i>
+				</div>
+			</td>
+		</tr>
+		</volist>
+		</tbody>
+		
+	</table>
+	<div class="bottom-search" >
+		
+	</div>
+	
+	
+<script type="text/javascript">
+$(document).unbind('click');
+TablePage(".qu-table",10);
+$("#searching").on("click",function(){
+$(".yincang").hide();
+  	$.ajax({
+	    url:"__ROOT__/admin/articlesearchapi",
+		type:"POST",
+		data:{
+			"key":$("#search").val()
+		},
+	    success: function(data){
+			switch(data.state){
+            case "0":
+            $(".bottom-search").hide();
+            $(".dianjiyc").hide();
+            var order=data.order;
+            for (var i = 0; i <order.length; i++){
+                var orderhtml=$('<tr class="yincang">'+
+				'<td>'+
+				order[i]["id"]+
+				'</td>'+
+				'<td>'+
+				order[i]["title"]+
+				'</td>'+
+				
+				'<td>'+
+				order[i]["author"]+
+				'</td>'+
+				'<td>'+
+				order[i]["source"]+
+				'</td>'+
+				'<td>'+
+				order[i]["category"]+
+				'</td>'+
+				'<td>'+
+				order[i]["type_name"]+
+				'</td>'+
+				'<td>'+
+				order[i]["time"]+
+				'</td>'+
+				'<td>'+
+				'<span style="float:left">'+
+				order[i]["key"]+
+				'</span>'+
+				'<div class="imgroll tickicon anjan" style="margin-left:15px;" data-id="'+order[i]["id"]+'" data-key="2">'+
+				'<i class="fa fa-check" style="color:white;margin-left:2.5px;">'+
+				'</i>'+
+				'</div>'+
+				'<div class="imgroll removeicon anjan" data-id="'+order[i]["id"]+'" data-key="1">'+
+				'<i class="fa fa-remove" style="color:white;margin-left:4.5px;">'+
+				'</i>'+
+				'</div>'+
+			    '</td>'+
+			    '<td>'+
+				'<a href="#/modify_article?p='+order[i]["id"]+'">'+
+				'<div class="editicon anjan">'+
+				'<i class="fa fa-pencil" style="color:white;margin-left:4.5px;">'+
+				'</i>'+
+				'</div>'+
+				'</a>'+
+			    '</td>'+
+			    '<td>'+
+				// '<div class="caozuo tickicon anjan">'+
+				// '<i class="fa fa-check" style="color:white;margin-left:2.5px;">'+
+				// '</i>'+
+				// '</div>'+
+				'<div class="caozuo removeicon anjan" data-id="'+order[i]["id"]+'">'+
+				'<i class="fa fa-remove" style="color:white;margin-left:4.5px;">'+
+				'</i>'+
+				'</div>'+
+			    '</td>'+
+		        '</tr>')
+                $(orderhtml).appendTo("#tianjia");
+            }
+            break;
+        default: 
+        break;
+                    }
+	    },
+		error: function(){
+	    }
+
+    });
+})
+$(document).on('click', '.imgroll', function() {
+	$.ajax({
+		url:"__ROOT__/admin/articlekeyapi",
+		type:"POST",
+		data:{
+			 "id":$(this).attr("data-id"),
+			 "key":$(this).attr("data-key")
+		},
+		success: function(data){
+			switch(data.state){
+                 case "0":
+                    alert(data.detail);
+                    window.location.reload();
+                    break;
+                    default: alert(data.detail);break;
+            }
+		},
+		error: function(){
+		}
+
+    });
+});
+$(document).on('click', '.caozuo', function() {
+	$.ajax({
+		url:"__ROOT__/admin/articledeleteapi",
+		type:"POST",
+		data:{
+			 "id":$(this).attr("data-id")
+			 // "key":$(this).attr("data-key")
+		},
+		success: function(data){
+			switch(data.state){
+                 case "0":
+                    alert(data.detail);
+                    window.location.reload();
+                    break;
+                    default: alert(data.detail);break;
+            }
+		},
+		error: function(){
+		}
+
+    });
+});
+</script>

@@ -1,0 +1,145 @@
+<div class="qu-header">
+		<i class="labelcolor fa fa-star fa-2x" aria-hidden="true"></i>
+		<span class="maintitle">&nbsp;新增专家</span>
+	</div>
+	<div class="ar-box">
+	<div class="ar-input">
+		<div class="ar-word">专家姓名</div>
+		<input id="aticle_title" type="text" class="nr ui-input" placeholder="请输入产品名称" style="width:90%;">
+	</div>
+	
+	<div class="ar-input">
+		<div class="ar-word">图片</div>
+		<input type="file" class="tianjia" id="img1">
+		<div class="ar-tupian" id="put1"></div>	
+	</div>
+	
+	<div class="ar-input">
+		<div class="ar-word">专家岗位</div>
+		<input id="aticle_title" type="text" class="nr ui-input" placeholder="请输入专家岗位" style="width:90%;">
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">专家电话</div>
+		<input id="aticle_title" type="text" class="nr ui-input" placeholder="请输入专家电话" style="width:90%;">
+	</div>
+
+	<div class="fabu">发布</div>
+</div>
+
+<script type="text/javascript">
+
+
+
+
+
+function img1(infile,outfile){
+		var result = $(outfile)[0]; 
+		var input = $(infile)[0];
+		if(typeof FileReader==='undefined'){ 
+		    result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+		    input.setAttribute('disabled','disabled');
+		}
+		else{ 
+			input.addEventListener('change',readFile,false);
+		}
+		var imagefile;
+		function readFile(){ 
+		    var file = this.files[0]; 
+		    if(!/image\/\w+/.test(file.type)){ 
+		        alert("文件必须为图片！"); 
+		        return false; 
+		    } 
+		    var reader = new FileReader(); 
+		    reader.readAsDataURL(file);
+		    reader.onload = function(e){ 
+		        result.innerHTML = '<img style="width:100%;height:100%;" src="'+this.result+'" alt=""/>';
+		        imagefile = this.result.split(',')[1];
+		    }
+		}
+}
+$("#img1").mouseenter(function(event) {
+	img1("#img1","#put1");
+});
+
+
+// 绑定时间插件
+$('#artile_dd').pickadate();
+// 发布文章按钮
+// var canfabu = true;
+author = $.trim($("#article_author").val()),
+$(".fabu").click(function(){
+	// if(canfabu){
+		var title = $.trim($("#aticle_title").val()),
+		    cate_id = $('#mainTagBox input:radio:checked').val(),
+			type = $('#fuTagBox input:radio:checked').val(),
+			time = $('#artile_dd').val(),
+			author = $.trim($("#article_author").val()),
+			source = $.trim($("#article_source").val()),
+			text = ue.getContent();
+			
+
+		if(title==""){
+			alert("文章标题不能为空");
+		}
+		else if(time==""){
+			alert("发表时间不能为空");
+		}
+		else if(author==""){
+			alert("作者不能为空");
+		}
+		else if(text==""){
+			alert("正文不能为空");
+		}
+		else if(source==""){
+			alert("来源不能为空");
+		}
+		else if(cate_id==""){
+			alert("发布位置不能为空");
+		}
+		else if(type==""){
+			alert("副标签不能为空");
+		}
+		else{
+			// canfabu = false;
+			var timearray = $('#artile_dd').val().split("-");
+			time = Date.parse(new Date(timearray[0],timearray[1]-1,timearray[2]))/1000;
+			var data = {
+					"title":title,
+				    "cate_id":cate_id,
+					"type":type,
+					"time":time,
+					"author":author,
+					"source":source,
+					"content":text
+				};
+			// 照片
+			// if($(".ar-tupian img").attr("src")!=(""||undefined)){
+			// 	data["image"]=$(".ar-tupian img").attr("src").split(',')[1];
+			// }
+			
+			$.ajax({
+				url: "__ROOT__/admin/articleinputapi",
+				type: "POST",
+				data: data,
+				success: function(data){
+					if(data.state==0){
+						alert("文章发布成功");
+						ue.execCommand('clearlocaldata');
+						window.location.reload();
+					}
+					else{
+						alert(data.detail);
+						// canfabu = true;
+					}
+				},
+				error: function(){
+					alert("网络异常")
+					// canfabu = true;
+				}
+			});
+		}
+	// }
+});
+
+</script>

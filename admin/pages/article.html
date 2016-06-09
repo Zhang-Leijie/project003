@@ -1,0 +1,166 @@
+<div class="qu-header">
+		<i class="labelcolor fa fa-star fa-2x" aria-hidden="true"></i>
+		<span class="maintitle">&nbsp;发布新闻</span>
+	</div>
+	<div class="ar-box">
+	<div class="ar-input">
+		<div class="ar-word">标题</div>
+		<input id="aticle_title" type="text" class="nr ui-input" placeholder="请输入标题" style="width:90%;">
+	</div>
+	<div class="ar-input" id="mainTagBox">
+		<div class="ar-word">发布位置</div>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra1" value="1">&nbsp;&nbsp;<label for="ra1">重要通知</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra2" value="2">&nbsp;&nbsp;<label for="ra2" >新闻中心</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra3" value="3">&nbsp;&nbsp;<label for="ra3">活动中心</label>
+		<input type="radio" name="weizhi" style="margin-left:10px;" id="ra4" value="4">&nbsp;&nbsp;<label for="ra4">展会消息</label>
+	</div>
+	
+	<div class="ar-input">
+		<div class="ar-word">发布时间</div>
+		<div style="position:relative;"><input id="artile_dd" type="text" class="nr ui-input" placeholder="请输入发布时间" style="width:90%;"></div>
+    </div>
+	<div class="ar-input">
+		<div class="ar-word">发布人</div>
+		<input id="article_author" type="text" class="nr ui-input" placeholder="请输入发布人" style="width:90%;">
+	</div>
+
+	<!-- <div class="ar-input">
+		<div class="ar-word">来源</div>
+		<input id="article_source" type="text" class="nr ui-input" placeholder="请输入来源" style="width:90%;">
+	</div> -->
+	
+	<!-- <div class="ar-input">
+		<div class="ar-word">摘要</div>
+		<textarea id="article_abstract" type="text" class="nr ui-input" placeholder="请输入文章摘要；有配图建议70字以内；无配图建议150字以内" style="width:90%;height: 150px;"></textarea>
+	</div> -->
+	
+	<!-- <div class="ar-input">
+		<div class="ar-word">配图</div>
+		<input type="file" class="tianjia">
+		<div class="ar-tupian"></div>	
+	</div> -->
+
+	<div class="ar-input">
+		<div class="ar-word">正文</div>
+		<script id="editor" type="text/plain" style="height: 500px;"></script>
+	</div>
+	<div class="fabu">发布</div>
+</div>
+
+<script type="text/javascript">
+
+//实例化编辑器
+//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+UE.delEditor('editor');
+var ue = UE.getEditor('editor',{wordCount:false});
+
+// setTimeout(function(){
+// 	ue.execCommand("drafts");
+// },500);
+
+
+
+// var result = $(".ar-tupian")[0]; 
+// var input = $(".tianjia")[0];
+// if(typeof FileReader==='undefined'){ 
+//     result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+//     input.setAttribute('disabled','disabled');
+// }
+// else{ 
+// 	input.addEventListener('change',readFile,false);
+// }
+// var imagefile;
+// function readFile(){ 
+//     var file = this.files[0]; 
+//     if(!/image\/\w+/.test(file.type)){ 
+//         alert("文件必须为图片！"); 
+//         return false; 
+//     } 
+//     var reader = new FileReader(); 
+//     reader.readAsDataURL(file);
+//     reader.onload = function(e){ 
+//         result.innerHTML = '<img style="width:250px;height:141px;" src="'+this.result+'" alt=""/>';
+//         imagefile = this.result.split(',')[1];
+//     }
+// }
+
+// 绑定时间插件
+$('#artile_dd').pickadate();
+// 发布文章按钮
+// var canfabu = true;
+author = $.trim($("#article_author").val()),
+$(".fabu").click(function(){
+	// if(canfabu){
+		var title = $.trim($("#aticle_title").val()),
+		    cate_id = $('#mainTagBox input:radio:checked').val(),
+			type = $('#fuTagBox input:radio:checked').val(),
+			time = $('#artile_dd').val(),
+			author = $.trim($("#article_author").val()),
+			source = $.trim($("#article_source").val()),
+			text = ue.getContent();
+			
+
+		if(title==""){
+			alert("文章标题不能为空");
+		}
+		else if(time==""){
+			alert("发表时间不能为空");
+		}
+		else if(author==""){
+			alert("作者不能为空");
+		}
+		else if(text==""){
+			alert("正文不能为空");
+		}
+		else if(source==""){
+			alert("来源不能为空");
+		}
+		else if(cate_id==""){
+			alert("发布位置不能为空");
+		}
+		else if(type==""){
+			alert("副标签不能为空");
+		}
+		else{
+			// canfabu = false;
+			var timearray = $('#artile_dd').val().split("-");
+			time = Date.parse(new Date(timearray[0],timearray[1]-1,timearray[2]))/1000;
+			var data = {
+					"title":title,
+				    "cate_id":cate_id,
+					"type":type,
+					"time":time,
+					"author":author,
+					"source":source,
+					"content":text
+				};
+			// 照片
+			// if($(".ar-tupian img").attr("src")!=(""||undefined)){
+			// 	data["image"]=$(".ar-tupian img").attr("src").split(',')[1];
+			// }
+			
+			$.ajax({
+				url: "__ROOT__/admin/articleinputapi",
+				type: "POST",
+				data: data,
+				success: function(data){
+					if(data.state==0){
+						alert("文章发布成功");
+						ue.execCommand('clearlocaldata');
+						window.location.reload();
+					}
+					else{
+						alert(data.detail);
+						// canfabu = true;
+					}
+				},
+				error: function(){
+					alert("网络异常")
+					// canfabu = true;
+				}
+			});
+		}
+	// }
+});
+
+</script>

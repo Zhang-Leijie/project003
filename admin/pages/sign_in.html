@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../adminsource/css/reset.css">
+    
+    <link rel="stylesheet" type="text/css" href="../adminsource/css/sign_in.css">
+    <script src="../adminsource/js/jquery-1.11.1.min.js"></script>
+     <script src="../adminsource/js/public.js"></script>
+     <script src="../adminsource/js/md5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../adminsource/css/Font-Awesome-4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="application">
+			<a href="sign_in.html"><div class="heart"><i class="fa fa-heart fa-lg"></i></div>
+			<span>UNIT</span></a>
+		</div>
+	</div>
+	<div class="controls" style="height:300px;">
+		<div class="caret"></div>
+		<div class="form-wrapper">
+			<h1>Sign in</h1>
+			<div class="gd">
+				<input type="text" class="denglu" placeholder="E-mail" id="mail">
+				<i class="fa fa-user user" ></i>
+			</div>
+			<div class="gd">
+				<input type="password" class="denglu" placeholder="Password" id="pass">
+				<i class="fa fa-lock user" ></i>
+			</div>
+			
+			<button type="submit" class="btn" style="cursor:pointer">Sign in</button>
+			
+		</div>
+	</div>
+<script type="text/javascript">
+$(".btn").click(function(){
+	$.ajax({
+		url:"__ROOT__/admin/loginapi",
+		type:"POST",
+		data:{
+			 "email":$("#mail").val(),
+			 "password":hex_md5($("#pass").val())
+		},
+		success: function(data){
+			switch(data.state){
+                 case "0":
+                    location.href="__ROOT__/admin/index.html";
+                    break;
+                    default: alert(data.detail);break;
+            }
+		},
+		error: function(){
+		}
+
+    });
+})
+</script>	
+</body>
+</html>

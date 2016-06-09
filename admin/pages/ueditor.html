@@ -1,0 +1,69 @@
+
+<div class="qu-header">
+		<i class="labelcolor fa fa-university fa-2x" aria-hidden="true"></i>
+		<span class="maintitle">&nbsp;ueditor</span>
+</div>
+
+<div class="col-box2">
+		 
+	<div class="ar-input">
+		<div class="ar-word">标题</div>
+		<input type="text" class="nr ui-input" placeholder="请输入标题" style="width:90%;">
+	</div>
+	
+	
+	<div class="ar-input">
+		<div class="ar-word">发布时间</div>
+		<div style="position:relative;"><input id="dd" type="text" class="nr ui-input" placeholder="请输入发布时间" style="width:90%;"></div>
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">发布人</div>
+		<input id="people" type="text" class="nr ui-input" placeholder="请输入发布人" style="width:90%;">
+	</div>
+
+	<div class="ar-input">
+		<div class="ar-word">配图</div>
+		<input type="file" class="tianjia">
+		<div class="ar-tupian"></div>
+	</div>
+	
+	<div class="ar-input">
+		<div class="ar-word">正文</div>
+		<script id="editor" type="text/plain" style="margin-top:10px;width:95%;min-height:400px;margin-bottom:30px;"></script>
+	</div>
+	
+	
+	<div class="fabu">确认</div>
+	<div class="fabu">返回</div>
+	</div>
+
+	<script type="text/javascript">
+		UE.delEditor('editor');
+    	var ue = UE.getEditor('editor');
+    	$('#dd').pickadate();
+    	var result = $(".ar-tupian")[0]; 
+		var input = $(".tianjia")[0];
+			if(typeof FileReader==='undefined'){ 
+   			 result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+    			input.setAttribute('disabled','disabled');
+				}
+			else{ 
+				input.addEventListener('change',readFile,false); 
+			}
+		var imagefile;
+		function readFile(){ 
+    	var file = this.files[0]; 
+		    if(!/image\/\w+/.test(file.type)){ 
+		        alert("文件必须为图片！"); 
+		        return false; 
+		    } 
+		    var reader = new FileReader(); 
+		    reader.readAsDataURL(file);
+		    reader.onload = function(e){ 
+		        result.innerHTML = '<img style="width:250px;height:141px;" src="'+this.result+'" alt=""/>';
+		        imagefile = this.result.split(',')[1];
+
+		    }
+		}
+	</script>

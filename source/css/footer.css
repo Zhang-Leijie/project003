@@ -8,6 +8,14 @@
   content: '';
   clear: both;
 }
+.wushi {
+  position: absolute;
+  left: 72px;
+  bottom: 70px;
+  z-index: 100;
+  color: white;
+  font-size: 50px;
+}
 .web_footer {
   margin-top: 40px;
   width: 100%;
