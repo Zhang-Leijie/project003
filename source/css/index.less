@@ -3,6 +3,7 @@
 .swiper-container {
     width: 100%;
     height: 533px;
+    min-width: 1024px;
 }
 .web_content{
 	width: 100%;
@@ -134,12 +135,13 @@
 	margin-top: 30px;
 	width: 100%;
 	.cenbox{
-		max-width:1280px;
+		min-width:1024px;
 		margin: 0px auto;
 		
 		.introduce{
-			padding: 0px 135px;
-			width: 100%;
+			padding: 0px 10px;
+			width: 1024px;
+			margin: 0 auto;
 			h1{
 				text-align: center;
 				letter-spacing:4px;
@@ -148,6 +150,7 @@
 				margin-top: 20px;
 				color: @wordcolor;
 				letter-spacing:2px;
+				padding: 5px;
 			}
 			.more{
 				width: 200px;
@@ -163,46 +166,52 @@
 		}
 		.news{
 			width: 100%;
+			min-width: 1024px;
 			background-color:@background;
-			padding: 30px 135px;
-			.title{
-				width: 100%;
-				font-size: 20px;
-				margin-bottom: 20px;
-			}
-			.article{
-				position: relative;
-				width: 100%;
-				padding-left: 100px;
-				padding-right: 100px;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				.time{
-					position: absolute;
-					top: 5px;
-					left: 0px;
-				}
-				.newstitle{
+			padding: 30px 10px;
+			.inbox{
+				width: 1004px;
+				margin: 0 auto;
+				.title{
 					width: 100%;
+					font-size: 20px;
+					margin-bottom: 20px;
 				}
-				.newszw{
+				.article{
+					position: relative;
 					width: 100%;
-					font-size: 12px;
-					text-overflow:ellipsis;
-					white-space:nowrap;
-					overflow:hidden; 
-				}
-				.more{
-					position: absolute;
-					bottom: 5px;
-					right: 0px;
-					color: @unitecolor;
+					padding-left: 100px;
+					padding-right: 100px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					.time{
+						position: absolute;
+						top: 5px;
+						left: 0px;
+					}
+					.newstitle{
+						width: 100%;
+					}
+					.newszw{
+						width: 100%;
+						font-size: 12px;
+						text-overflow:ellipsis;
+						white-space:nowrap;
+						overflow:hidden; 
+					}
+					.more{
+						position: absolute;
+						bottom: 5px;
+						right: 0px;
+						color: @unitecolor;
+					}
 				}
 			}
 		}
 		.link{
-			padding: 0px 145px;
-			margin-top: 50px;
+			width:1024px;
+			padding: 0px 10px;
+			margin: 50px auto 0;
 			.title{
 				width: 100%;
 				text-align: center;
@@ -212,7 +221,7 @@
 				margin-top: 40px;
 				width: 100%;
 				.inimg{
-					margin-right: 2px;
+					margin:0 3px;
 					position: relative;
 					img{
 						width: 100%;
@@ -241,6 +250,7 @@
 	.swiper-container {
 	    width: 100%;
 	    height: 150px;
+	    min-width: 0px;
 	    .swiper-wrapper{
 	    	.swiper-slide{
 	    		.back{

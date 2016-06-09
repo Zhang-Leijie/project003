@@ -8,7 +8,10 @@
   content: '';
   clear: both;
 }
-.wushi {
+.swiper-container {
+  position: relative;
+}
+.swiper-container .wushi {
   position: absolute;
   left: 72px;
   bottom: 70px;
@@ -19,6 +22,7 @@
 .swiper-container {
   width: 100%;
   height: 533px;
+  min-width: 1024px;
 }
 .web_content {
   width: 100%;
@@ -130,12 +134,13 @@
   width: 100%;
 }
 .content .cenbox {
-  max-width: 1280px;
+  min-width: 1024px;
   margin: 0px auto;
 }
 .content .cenbox .introduce {
-  padding: 0px 135px;
-  width: 100%;
+  padding: 0px 10px;
+  width: 1024px;
+  margin: 0 auto;
 }
 .content .cenbox .introduce h1 {
   text-align: center;
@@ -145,6 +150,7 @@
   margin-top: 20px;
   color: #646464;
   letter-spacing: 2px;
+  padding: 5px;
 }
 .content .cenbox .introduce .more {
   width: 200px;
@@ -159,15 +165,20 @@
 }
 .content .cenbox .news {
   width: 100%;
+  min-width: 1024px;
   background-color: #f8f8f8;
-  padding: 30px 135px;
+  padding: 30px 10px;
 }
-.content .cenbox .news .title {
+.content .cenbox .news .inbox {
+  width: 1004px;
+  margin: 0 auto;
+}
+.content .cenbox .news .inbox .title {
   width: 100%;
   font-size: 20px;
   margin-bottom: 20px;
 }
-.content .cenbox .news .article {
+.content .cenbox .news .inbox .article {
   position: relative;
   width: 100%;
   padding-left: 100px;
@@ -175,30 +186,31 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.content .cenbox .news .article .time {
+.content .cenbox .news .inbox .article .time {
   position: absolute;
   top: 5px;
   left: 0px;
 }
-.content .cenbox .news .article .newstitle {
+.content .cenbox .news .inbox .article .newstitle {
   width: 100%;
 }
-.content .cenbox .news .article .newszw {
+.content .cenbox .news .inbox .article .newszw {
   width: 100%;
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.content .cenbox .news .article .more {
+.content .cenbox .news .inbox .article .more {
   position: absolute;
   bottom: 5px;
   right: 0px;
   color: #892526;
 }
 .content .cenbox .link {
-  padding: 0px 145px;
-  margin-top: 50px;
+  width: 1024px;
+  padding: 0px 10px;
+  margin: 50px auto 0;
 }
 .content .cenbox .link .title {
   width: 100%;
@@ -210,7 +222,7 @@
   width: 100%;
 }
 .content .cenbox .link .img .inimg {
-  margin-right: 2px;
+  margin: 0 3px;
   position: relative;
   float: left;
   width: 245px;
@@ -235,6 +247,7 @@
   .swiper-container {
     width: 100%;
     height: 150px;
+    min-width: 0px;
   }
   .swiper-container .swiper-wrapper .swiper-slide .back {
     position: absolute;

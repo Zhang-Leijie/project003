@@ -275,13 +275,7 @@
 // window.onload = function(){
 //     swiper();
 // }
-var u = $(".cenbox").width();
-$(".rightbox").css("width",u-210+"px");
 
-$(window).bind("resize",function(){
-    var d = $(".cenbox").width();
-$(".rightbox").css("width",d-210+"px");
-});
 $(".list").click(function() {
     $(".list").removeClass('show');
     $(this).addClass('show');

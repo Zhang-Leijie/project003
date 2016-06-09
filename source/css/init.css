@@ -8,7 +8,10 @@
   content: '';
   clear: both;
 }
-.wushi {
+.swiper-container {
+  position: relative;
+}
+.swiper-container .wushi {
   position: absolute;
   left: 72px;
   bottom: 70px;

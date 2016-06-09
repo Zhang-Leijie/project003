@@ -8,7 +8,10 @@
   content: '';
   clear: both;
 }
-.wushi {
+.swiper-container {
+  position: relative;
+}
+.swiper-container .wushi {
   position: absolute;
   left: 72px;
   bottom: 70px;
@@ -19,24 +22,30 @@
 .swiper-container {
   width: 100%;
   height: 533px;
+  min-width: 1024px;
 }
 .content {
   width: 100%;
 }
 .content .cenbox {
-  max-width: 1280px;
+  min-width: 1024px;
   margin: 0px auto;
 }
 .content .cenbox .lead {
   width: 100%;
-  padding: 0px 135px;
+  padding: 0px 10px;
   height: 50px;
   line-height: 50px;
   background-color: #ebebeb;
 }
+.content .cenbox .lead .word {
+  width: 1004px;
+  margin: 0 auto;
+}
 .content .cenbox .inbox {
-  width: 100%;
-  padding: 30px 135px;
+  width: 1024px;
+  padding: 30px 10px;
+  margin: 0 auto;
 }
 .content .cenbox .inbox .leftbox {
   float: left;
@@ -74,14 +83,14 @@
 }
 .content .cenbox .inbox .rightbox {
   float: left;
-  padding: 0px 30px;
+  width: 790px;
+  padding: 0px 0px 0px 20px;
   color: #646464;
 }
 .content .cenbox .inbox .rightbox .amount {
   width: 240px;
-  margin-bottom: 5px;
   height: auto;
-  margin-left: 5px;
+  margin: 0 7px 10px;
   float: left;
   padding: 50px 10px 10px;
   position: relative;
@@ -180,6 +189,7 @@
   .swiper-container {
     width: 100%;
     height: 150px;
+    min-width: 0px;
   }
   .wrapbox {
     width: 100%;
@@ -220,6 +230,7 @@
   .content .cenbox {
     display: none;
     width: 100%;
+    min-width: 0px;
     padding: 10px;
   }
   .content .cenbox .img {
