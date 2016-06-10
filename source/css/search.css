@@ -1,0 +1,147 @@
+.after:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.before:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+.swiper-container {
+  position: relative;
+}
+.swiper-container .wushi {
+  position: absolute;
+  left: 72px;
+  bottom: 70px;
+  z-index: 100;
+  color: white;
+  font-size: 50px;
+}
+.swiper-container .swiper-slide .lunbotu {
+  background-position: center;
+  width: 1280px;
+  height: 460px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content {
+  width: 100%;
+}
+.content .cenbox {
+  min-width: 1024px;
+  margin: 0px auto;
+}
+.content .cenbox .bigtitle {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 60px;
+}
+.content .cenbox .search {
+  width: 540px;
+  height: 27px;
+  padding-right: 34px;
+  margin: 20px auto 0px;
+  position: relative;
+}
+.content .cenbox .search input {
+  width: 100%;
+  height: 100%;
+  padding: 4px 7px;
+  border: 1px solid #ccc;
+}
+.content .cenbox .search .searchicon {
+  position: absolute;
+  background-color: #646464;
+  width: 34px;
+  height: 27px;
+  top: 0px;
+  right: 0px;
+  padding: 2px 8px;
+}
+.content .cenbox .line {
+  width: 1024px;
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  margin-top: 22px;
+  color: #646464;
+  text-align: center;
+}
+.content .cenbox .result {
+  width: 1024px;
+  padding: 10px;
+  color: #646464;
+  margin: 0 auto;
+}
+.content .cenbox .result .amount {
+  width: 240px;
+  height: auto;
+  margin: 0 5px 10px;
+  float: left;
+  padding: 50px 10px 10px;
+  position: relative;
+  background-color: #f8f8f8;
+}
+.content .cenbox .result .amount .title {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 15px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #535353;
+  color: white;
+  font-size: 14px;
+}
+.content .cenbox .result .amount .name {
+  line-height: 30px;
+}
+.content .cenbox .result .amount .img {
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  margin-bottom: 7px;
+}
+.content .cenbox .result .amount .intro {
+  width: 100%;
+  height: 180px;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    min-height: 200px;
+  }
+  .content .cenbox {
+    color: #646464;
+    width: 100%;
+    min-width: 0px;
+    padding: 10px;
+  }
+  .content .cenbox .bigtitle {
+    width: 100%;
+  }
+  .content .cenbox .search {
+    width: 100%;
+  }
+  .content .cenbox .line {
+    width: 100%;
+  }
+  .content .cenbox .result {
+    width: 100%;
+  }
+  .content .cenbox .result .img {
+    padding: 10px 0;
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
+  .content .cenbox .result .img img {
+    width: 100%;
+  }
+}

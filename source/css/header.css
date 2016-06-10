@@ -115,36 +115,35 @@
 }
 .header {
   width: 100%;
-  height: 173px;
+  height: 136px;
 }
 .header .cenbox {
   position: relative;
   width: 1024px;
   margin: 0 auto;
-  padding: 20px 10px;
-  height: 173px;
+  padding: 25px 10px 0px;
+  height: 136px;
 }
 .header .cenbox .brand {
   width: 360px;
-  height: 50px;
+  height: 40px;
 }
 .header .cenbox .brand .img {
   width: 170px;
-  height: 50px;
+  height: 40px;
   border-right: 1px solid black;
   float: left;
 }
 .header .cenbox .brand .img img {
   width: 160px;
-  height: 50px;
+  height: 40px;
 }
 .header .cenbox .brand .word {
-  padding-left: 5px;
-  padding-top: 10px;
   width: 190px;
   float: left;
   height: 100%;
   text-align: center;
+  padding: 5px 3px;
 }
 .header .cenbox .brand .word .eng {
   width: 320px;
@@ -157,13 +156,13 @@
   color: #892526;
   float: right;
   font-size: 16px;
-  margin-top: -10px;
+  margin-top: -30px;
 }
 .header .cenbox .navbox {
   position: absolute;
   bottom: 0px;
   left: 10px;
-  height: 40px;
+  height: 30px;
 }
 .header .cenbox .navbox .nav {
   list-style-type: none;
@@ -177,11 +176,11 @@
 }
 .header .cenbox .navbox .nav li .word {
   display: inline-block;
-  height: 40px;
+  height: 30px;
 }
 .header .cenbox .searchbox {
   position: absolute;
-  bottom: 15px;
+  bottom: 9px;
   right: 10px;
   float: left;
   width: 200px;

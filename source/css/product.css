@@ -21,7 +21,6 @@
 }
 .swiper-container {
   width: 100%;
-  height: 533px;
   min-width: 1024px;
 }
 .content {
@@ -34,8 +33,8 @@
 .content .cenbox .lead {
   width: 100%;
   padding: 0px 10px;
-  height: 50px;
-  line-height: 50px;
+  height: 47px;
+  line-height: 47px;
   background-color: #ebebeb;
 }
 .content .cenbox .lead .word {

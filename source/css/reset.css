@@ -31,6 +31,7 @@ input[type="button"] {
 }
 img {
   border: 0;
+  vertical-align:bottom;
 }
 *[id^='xunlei'] {
   display: none;

@@ -38,10 +38,10 @@
     <div class="navbox">
         <ul class="nav">
             <li><span class="word"><a href="index.html">首页</a></span><span class="fenge">|</span></li>
-            <li><span class="word"><a href="aboutus.html">关于我们</a></span><span class="fenge">|</span></li>
+            <li><span class="word" style="border-bottom:2px solid #892526;"><a href="aboutus.html">关于我们</a></span><span class="fenge">|</span></li>
             <li><span class="word"><a href="product.html">产品中心</a></span><span class="fenge">|</span></li>
             <li><span class="word"><a href="employ.html">企业招聘</a></span><span class="fenge">|</span></li>
-            <li><span class="word" style="border-bottom:2px solid #892526;"><a href="news.html">新闻和活动</a></span><span class="fenge">|</span></li>
+            <li><span class="word" ><a href="news.html">新闻和活动</a></span><span class="fenge">|</span></li>
             <li><span class="word"><a href="connect.html">联系我们</a></span><span class="fenge">|</span></li>
         </ul>
     </div>
@@ -65,25 +65,17 @@
         <div class="lead">
             <div class="word">
                 <span style="color:#892526;">首页&nbsp;<i class="fa fa-angle-right " aria-hidden="true"></i></span>
-                <span style="color:#892526;">新闻和活动&nbsp;<i class="fa fa-angle-right " aria-hidden="true"></i></span>
-                <span>新闻中心</span>
+                <span>关于我们&nbsp;</span>
+                
             </div>
         </div>
         
         <div class="news" style="margin-top:2px;">
             <div class="detailtitle">
-                新闻中心
+                关于我们
             </div>
-            <div class="sort">
-                重要通知｜新闻中心｜活动中心｜展会消息
-            </div>
+            
             <div class="article-detail">
-                <div class="title">
-                    尤奈特公司发表的新闻
-                </div>
-                <div class="time">
-                    2016/06/03
-                </div>
                 <div class="incon">
                     测试
                 </div>
@@ -146,12 +138,12 @@
 // }
 var w=$(window).width();
 if(w<600){
-        window.location.href="web_newsarticle.html";
+        window.location.href="web_aboutus.html";
 }
 $(window).bind("resize",function(){
     var h =  $(window).width();
     if(h<600){
-        window.location.href="web_newsarticle.html";
+        window.location.href="web_aboutus.html";
     }
 });
 </script> 

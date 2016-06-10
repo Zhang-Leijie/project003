@@ -7,7 +7,7 @@
     <title>尤奈特</title>
     <!-- <link href="__PUBLIC__/source/img/favicon.ico" rel="icon"> -->
     <link rel="stylesheet" type="text/css" href="../source/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../source/css/news.css">
+    <link rel="stylesheet" type="text/css" href="../source/css/search.css">
     <link rel="stylesheet" type="text/css" href="../source/css/header.css">
     <link rel="stylesheet" type="text/css" href="../source/css/footer.css">
     <!-- <link rel="stylesheet" type="text/css" href="../source/Swiper-3.3.1 2/dist/css/swiper.css"> -->
@@ -56,42 +56,51 @@
 
 <div class="content">
     <div class="cenbox">
-        <h1>
-            新闻中心
-        </h1>
-        <div class="news">
-            <div class="article">
-                <div class="time">
-                    2016/5/30
-                </div>
-                <div class="newstitle">
-                    尤奈特发表的新闻标题
-                </div>
-                <div class="newszw">
-                    尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻
-                </div>
-                <div class="more">
-                    阅读详情
-                    <i class="fa fa-angle-right " aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="article">
-                <div class="time">
-                    2016/5/30
-                </div>
-                <div class="newstitle">
-                    尤奈特发表的新闻标题
-                </div>
-                <div class="newszw">
-                    尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻尤奈特发表的新闻
-                </div>
-                <div class="more">
-                    阅读详情
-                    <i class="fa fa-angle-right " aria-hidden="true"></i>
-                </div>
+        <div class="bigtitle">
+            搜索结果
+        </div>
+        <div class="search">
+            <input type="text">
+            <div class="searchicon">
+                 <i class="fa fa-search fa-lg" aria-hidden="true" style="color:white;"></i>
             </div>
         </div>
-        
+        <div class="line">
+            ""的搜索结果 约为121件，相关结果为1-10件结果
+        </div>
+        <div class="result">
+            <div class="img">
+            <a href="web_productdetail.html">
+            <img src="../source/image/webimg/pro1.jpg" style="width:100%;">
+            </a>
+            <div class="word">
+                <span>无刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro2.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷控制器</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro3.jpg" style="width:100%;">
+            <div class="word">
+                <span>无刷工业电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../source/image/webimg/pro4.jpg" style="width:100%;">
+            <div class="word">
+                <span>有刷牵引电机</span><br/>
+                <span>BLT16-VS 165</span>
+            </div>
+        </div>
+        <div class="after"></div>
+        </div>
     </div>
 </div>
 
@@ -166,12 +175,12 @@
 
 var w=$(window).width();
 if(w>600){
-        window.location.href="newsdetail.html";
+        window.location.href="search.html";
 }
 $(window).bind("resize",function(){
     var h =  $(window).width();
     if(h>600){
-        window.location.href="newsdetail.html";
+        window.location.href="search.html";
     }
 });
 </script> 

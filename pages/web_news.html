@@ -28,7 +28,7 @@
             </div>
             <ul>
                 <a href="web_index.html"><li>首页</li></a>
-                <a href="web_connect.html"><li>关于我们</li></a>
+                <a href="web_aboutus.html"><li>关于我们</li></a>
                 <a href="web_product.html"><li>产品中心</li></a>
                 <a href="web_employ.html"><li>企业招聘</li></a>
                 <a href="web_news.html"><li>新闻和活动</li></a>
@@ -228,7 +228,7 @@
 
 <footer class="web_footer">
     <div class="web_cenbox">
-        <ul class="title">
+        <ul class="foottitle">
             关于我们
             <i class="xiala fa fa-angle-down fa-lg" aria-hidden="true"></i>
             <i class="shangla fa fa-angle-up fa-lg" aria-hidden="true"></i>
@@ -243,7 +243,7 @@
             <li>领导关怀</li>
             <li>浙江省企业技术中心</li>
         </ul>
-        <ul class="title">
+        <ul class="foottitle">
             产品中心
             <i class="xiala fa fa-angle-down fa-lg" aria-hidden="true"></i>
             <i class="shangla fa fa-angle-up fa-lg" aria-hidden="true"></i>
@@ -255,7 +255,7 @@
             <li>有刷牵引电机</li>
             <li>其他产品</li>
         </ul>
-        <ul class="title">
+        <ul class="foottitle">
             企业招聘
             <i class="xiala fa fa-angle-down fa-lg" aria-hidden="true"></i>
             <i class="shangla fa fa-angle-up fa-lg" aria-hidden="true"></i>
@@ -265,7 +265,7 @@
             <li>人才招聘</li>
             <li>伦理与遵法</li>
         </ul>
-        <ul class="title">
+        <ul class="foottitle">
             新闻和活动
             <i class="xiala fa fa-angle-down fa-lg" aria-hidden="true"></i>
             <i class="shangla fa fa-angle-up fa-lg" aria-hidden="true"></i>
@@ -276,7 +276,7 @@
             <li>活动中心</li>
             <li>展会介绍</li>
         </ul>
-        <ul class="title">
+        <ul class="foottitle">
            联系我们
             <i class="xiala fa fa-angle-down fa-lg" aria-hidden="true"></i>
             <i class="shangla fa fa-angle-up fa-lg" aria-hidden="true"></i>
@@ -294,15 +294,7 @@
 // window.onload = function(){
 //     swiper();
 // }
-$(".title").click(function(event) {
-    $(this).next(".list").toggle(400);
-    $(this).children('.xiala').toggle(400);
-    $(this).children('.shangla').toggle(400);
-});
-$(".select").click(function(event) {
-    $(".head_list").toggle();
-    $(".select").toggleClass('show');
-});
+
 var w=$(window).width();
 if(w>600){
         window.location.href="news.html";
