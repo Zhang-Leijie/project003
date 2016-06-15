@@ -19,6 +19,13 @@
   color: white;
   font-size: 50px;
 }
+.swiper-container .swiper-slide .lunbotu {
+  background-position: center;
+  width: 1280px;
+  height: 460px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .web_header {
   height: 35px;
 }
@@ -121,36 +128,39 @@
   position: relative;
   width: 1024px;
   margin: 0 auto;
-  padding: 25px 10px 0px;
+  padding: 16px 10px 0px;
   height: 136px;
 }
 .header .cenbox .brand {
-  width: 360px;
-  height: 40px;
+  width: 600px;
+  height: 60px;
 }
 .header .cenbox .brand .img {
-  width: 170px;
-  height: 40px;
+  width: 250px;
+  height: 60px;
   border-right: 1px solid black;
   float: left;
 }
 .header .cenbox .brand .img img {
-  width: 160px;
-  height: 40px;
+  width: 240px;
+  height: 60px;
 }
 .header .cenbox .brand .word {
-  width: 190px;
   float: left;
   height: 100%;
   text-align: center;
   padding: 5px 3px;
 }
+.header .cenbox .brand .word .chn {
+  margin-left: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
 .header .cenbox .brand .word .eng {
-  width: 320px;
+  width: 270px;
   display: inline-block;
-  font-size: 12px;
-  -webkit-transform-origin-x: 0;
-  -webkit-transform: scale(0.6);
+  font-size: 10px;
+  color: #646464;
 }
 .header .cenbox .tel {
   color: #892526;
@@ -171,8 +181,8 @@
   float: left;
 }
 .header .cenbox .navbox .nav li .fenge {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .header .cenbox .navbox .nav li .word {
   display: inline-block;
