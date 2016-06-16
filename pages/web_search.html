@@ -60,7 +60,7 @@
             搜索结果
         </div>
         <div class="search">
-            <input type="text">
+            <input type="text" style="border-radius:0px;">
             <div class="searchicon">
                  <i class="fa fa-search fa-lg" aria-hidden="true" style="color:white;"></i>
             </div>
@@ -182,6 +182,10 @@ $(window).bind("resize",function(){
     if(h>600){
         window.location.href="search.html";
     }
+});
+$(".img>img").click(function(event) {
+    /* Act on the event */
+    window.location.href="web_productdetail.html"
 });
 </script> 
 </body>

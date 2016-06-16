@@ -21,7 +21,8 @@
 }
 .swiper-container .swiper-slide .lunbotu {
   background-position: center;
-  width: 1280px;
+  width: 100%;
+  min-width: 1280px;
   height: 460px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,7 +137,8 @@
 }
 @media (max-width: 600px) {
   .content {
-    min-height: 350px;
+    margin-top: 35px;
+    min-height: 450px;
   }
   .content .cenbox {
     width: 100%;
