@@ -22,7 +22,7 @@
 .swiper-container .swiper-slide .lunbotu {
   background-position: center;
   width: 100%;
-  min-width: 1280px;
+  min-width: 1024px;
   height: 460px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,12 +121,12 @@
 }
 .content .cenbox .rightbox .chance .img {
   float: left;
-  width: 175px;
+  width: 220px;
   height: 125px;
 }
 .content .cenbox .rightbox .chance .text {
   float: left;
-  width: 565px;
+  width: 520px;
   padding: 0 10px;
 }
 @media (max-width: 600px) {

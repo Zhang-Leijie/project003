@@ -22,7 +22,7 @@
 .swiper-container .swiper-slide .lunbotu {
   background-position: center;
   width: 100%;
-  min-width: 1280px;
+  min-width: 1024px;
   height: 460px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +97,7 @@
 .content .cenbox .inbox .rightbox .amount {
   width: 240px;
   height: auto;
-  margin: 0 7px 10px;
+  margin: 0 7px 14px;
   float: left;
   padding: 50px 10px 10px;
   position: relative;
