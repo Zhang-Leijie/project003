@@ -158,7 +158,7 @@
   float: left;
   height: 100%;
   text-align: center;
-  padding: 5px 3px;
+  padding: 15px 3px 0px;
 }
 .header .cenbox .brand .word .chn {
   margin-left: 10px;
@@ -166,10 +166,12 @@
   letter-spacing: 1px;
 }
 .header .cenbox .brand .word .eng {
-  width: 300px;
+  margin-top: -3px;
+  width: 280px;
+  font-family: helvetica;
   display: inline-block;
   font-size: 10px;
-  color: #646464;
+  color: #333;
 }
 .header .cenbox .tel {
   color: #892526;

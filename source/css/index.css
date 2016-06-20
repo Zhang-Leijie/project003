@@ -46,7 +46,7 @@
 }
 .web_content .introduce .word {
   margin-top: 5px;
-  color: #646464;
+  color: #333;
 }
 .web_content .introduce .more {
   width: 150px;
@@ -151,12 +151,12 @@
 }
 .content .cenbox .introduce h1 {
   text-align: center;
-  letter-spacing: 4px;
+  font-size: 36px;
 }
 .content .cenbox .introduce .word {
   margin-top: 20px;
-  color: #646464;
-  letter-spacing: 2px;
+  color: #333;
+  font-size: 18px;
   padding: 5px;
 }
 .content .cenbox .introduce .more {
@@ -182,7 +182,7 @@
 }
 .content .cenbox .news .inbox .title {
   width: 100%;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 .content .cenbox .news .inbox .article {
@@ -197,13 +197,15 @@
   position: absolute;
   top: 6px;
   left: 0px;
+  font-size: 16px;
 }
 .content .cenbox .news .inbox .article .newstitle {
   width: 100%;
+  font-size: 16px;
 }
 .content .cenbox .news .inbox .article .newszw {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -220,9 +222,10 @@
   margin: 50px auto 0;
 }
 .content .cenbox .link .title {
+  font-weight: bold;
   width: 100%;
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
 }
 .content .cenbox .link .img {
   margin-top: 40px;
