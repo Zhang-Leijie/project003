@@ -349,6 +349,7 @@
         if (s.params.parallax || s.params.watchSlidesVisibility) {
             s.params.watchSlidesProgress = true;
         }
+
         // Coverflow / 3D
         if (['cube', 'coverflow', 'flip'].indexOf(s.params.effect) >= 0) {
             if (s.support.transforms3d) {

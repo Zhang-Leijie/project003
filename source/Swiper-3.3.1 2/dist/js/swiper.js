@@ -350,6 +350,27 @@
             s.params.watchSlidesProgress = true;
         }
         // Coverflow / 3D
+        if (!Array.prototype.indexOf)
+{
+  Array.prototype.indexOf = function(elt /*, from*/)
+  {
+    var len = this.length >>> 0;
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0)
+         ? Math.ceil(from)
+         : Math.floor(from);
+    if (from < 0)
+      from += len;
+    for (; from < len; from++)
+    {
+      if (from in this &&
+          this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
+
         if (['cube', 'coverflow', 'flip'].indexOf(s.params.effect) >= 0) {
             if (s.support.transforms3d) {
                 s.params.watchSlidesProgress = true;
@@ -3708,7 +3729,7 @@
             if (selector) {
                 // String
                 if (typeof selector === 'string') {
-                    var els, tempParent, html = selector.trim();
+                    var els, tempParent, html = $.trim(selector.trim());
                     if (html.indexOf('<') >= 0 && html.indexOf('>') >= 0) {
                         var toCreate = 'div';
                         if (html.indexOf('<li') === 0) toCreate = 'ul';

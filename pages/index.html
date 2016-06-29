@@ -12,12 +12,13 @@
     <link rel="stylesheet" type="text/css" href="../source/css/footer.css">
     <link rel="stylesheet" type="text/css" href="../source/Swiper-3.3.1 2/dist/css/swiper.css">
     <link rel="stylesheet" type="text/css" href="../source/font-awesome-4.4.0/css/font-awesome.min.css">
-    <script src="../source/js/jquery-1.11.2.min.js"></script>
+    <script src="../source/js/jquery-1.7.2.min.js"></script>
     <script src="../source/js/public.js"></script>
-    <script src="../source/Swiper-3.3.1 2/dist/js/swiper.jquery.min.js"></script>
+    <!-- // <script src="../source/Swiper-3.3.1 2/dist/js/swiper.min.js"></script> -->
+    <script src="../source/js/jquery.touchslider.min.js"></script>
 </head>
 <body>
-<header class="header">
+<div class="header">
     <div class="cenbox">
     <div class="brand">
         <a href="index.html">
@@ -54,15 +55,11 @@
         </div>
     </div>
     </div>
-</header>
-<div class="swiper-container">
-    <!-- <div class="wushi">
-        务实创新<br/>
-        追求卓越
-    </div> -->
+</div>
+<!-- <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="lunbotu" style="background-image:url(../source/image/webimg/banner1.jpg">
+            <div class="lunbotu" style="background-image:url(../source/image/webimg/banner1.jpg);'filter':'progid':DXImageTransform.Microsoft.AlphaImageLoader(src='../source/image/webimg/banner1.jpg'); ">
                 
             </div>
         </div>
@@ -75,6 +72,23 @@
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
     <div class="swiper-button-next swiper-button-white"></div>
+</div> -->
+<div class="touchslider" style="min-width:1024px;">
+    <div class="touchslider-viewport" style="overflow:hidden">
+        <div style="height:460px;width:100%;min-width:1024px;">
+            <div class="touchslider-item">
+                <img src="../source/image/webimg/banner1.jpg">
+            </div>
+            <div class="touchslider-item">
+                <img src="../source/image/webimg/banner2.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+        <span class="touchslider-nav-item touchslider-nav-item-current">1</span>
+        <span class="touchslider-nav-item">2</span>
+    </div> -->
 </div>
 <div class="content">
     <div class="cenbox">
@@ -230,7 +244,7 @@
     </div>
 </div>
 
-<footer class="footer">
+<div class="footer">
     <div class="cenbox">
         <div class="links">
             <div class="sort" style="font-size:14px;font-weight:bold">厂容厂貌</div>
@@ -314,12 +328,27 @@
         </div>
         <div class="after"></div>
     </div>
-</footer>
+</div>
 <script type="text/javascript">
 // $("#map").load("map.html");
-window.onload = function(){
-    swiper();
-}
+// window.onload = function(){
+//     swiper();
+// }
+$(".touchslider").touchSlider({
+            container: this,
+            duration: 350,
+            delay: 1000, 
+            margin: 0, 
+            mouseTouch: true,
+            namespace: "touchslider",
+            next: ".touchslider-next", //下一张按钮的样式
+            pagination: ".touchslider-nav-item",
+            currentClass: "touchslider-nav-item-current", 
+            prev: ".touchslider-prev", // 上一张按钮样式
+            autoplay: true, 
+            viewport: ".touchslider-viewport"
+});
+
 var w=$(window).width();
 if(w<600){
         window.location.href="web_index.html";
